@@ -21,9 +21,7 @@
 
         morph_del: morph_del {
             compatible = "zmk,behavior-mod-morph";
-            label = "MORPH_DEL";
             bindings = <&kp BACKSPACE>, <&kp DEL>;
-
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
         };
