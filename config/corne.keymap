@@ -22,6 +22,7 @@
         morph_del: morph_del {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp BACKSPACE>, <&kp DEL>;
+
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
         };
@@ -50,10 +51,19 @@
 
         CorneFunc {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans            &trans  &trans  &trans  &trans  &trans  &to 0
+&trans        &trans        &trans        &trans        &trans        &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans  &to 3
 &trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans        &trans        &trans            &trans  &trans  &trans
+            >;
+        };
+
+        Gaming {
+            bindings = <
+&kp ESC  &kp N1      &kp Q  &kp W         &kp E         &kp R        &kp Y          &kp U         &kp I      &kp O    &kp P     &kp BACKSPACE
+&kp TAB  &kp LSHIFT  &kp A  &kp S         &kp D         &kp F        &kp H          &kp J         &kp K      &kp L    &kp SEMI  &kp ENTER
+&kp G    &kp LCTRL   &kp Z  &kp X         &kp C         &kp V        &kp N          &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
+                            &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE    &kp RIGHT_ALT  &kp LEFT_ALT  &mo 2
             >;
         };
     };
