@@ -18,6 +18,14 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+        bhm_space: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
 
         morph_del: morph_del {
             compatible = "zmk,behavior-mod-morph";
@@ -36,7 +44,7 @@
 &kp ESC    &kp Q  &kp W  &kp E         &kp R          &kp T             &kp Y          &kp U          &kp I      &kp O    &kp P     &morph_del
 &kp TAB    &kp A  &kp S  &bhm LCTRL D  &bhm LSHIFT F  &kp G             &kp H          &bhm LSHIFT J  &kp K      &kp L    &kp SEMI  &kp ENTER
 &kp LCTRL  &kp Z  &kp X  &kp C         &kp V          &kp B             &kp N          &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
-                         &kp LEFT_GUI  &mo 1          &bhm RALT SPACE   &kp RIGHT_ALT  &kp LEFT_ALT   &mo 2
+                         &kp LEFT_GUI  &mo 1          &bhm_space RALT SPACE   &kp RIGHT_ALT  &kp LEFT_ALT   &mo 2
             >;
         };
 
