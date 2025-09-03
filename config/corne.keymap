@@ -43,8 +43,8 @@
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E         &kp R          &kp T             &kp Y          &kp U          &kp I      &kp O    &kp P     &morph_del
 &kp TAB    &kp A  &kp S  &bhm LCTRL D  &bhm LSHIFT F  &kp G             &kp H          &bhm LSHIFT J  &kp K      &kp L    &kp SEMI  &kp ENTER
-&kp LCTRL  &kp Z  &kp X  &kp C         &kp V          &kp B             &kp N          &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
-                         &kp LEFT_GUI  &mo 1          &bhm_space RALT SPACE   &kp RIGHT_ALT  &kp LEFT_ALT   &kp LEFT_GUI
+&kp LSHIFT  &kp Z  &kp X  &kp C         &kp V          &kp B             &kp N          &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LSHIFT
+                         &kp LEFT_GUI  &mo 1          &bhm_space RALT SPACE   &kp RIGHT_ALT  &kp LCTRL   &mo 2
             >;
         };
 
@@ -60,19 +60,19 @@
         CorneFunc {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans            &trans  &trans  &trans  &trans  &trans  &to 0
-&trans        &trans        &trans        &trans        &trans        &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans  &to 3
+&trans        &trans        &trans        &trans        &trans        &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans        &trans        &trans            &trans  &trans  &trans
             >;
         };
 
-        Gaming {
-            bindings = <
-&kp ESC  &kp N1      &kp Q  &kp T         &kp D         &kp J        &kp Y          &kp U         &kp I      &kp O    &kp P     &kp BACKSPACE
-&kp TAB  &kp LSHIFT  &kp A  &kp S         &kp I         &kp G        &kp H          &kp J         &kp K      &kp L    &kp SEMI  &kp ENTER
-&kp LT   &kp LCTRL   &kp Z  &kp X         &kp W         &kp V        &kp N          &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
-                            &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE    &kp RIGHT_ALT  &kp LEFT_ALT  &mo 2
-            >;
-        };
+//        Gaming {
+//            bindings = <
+//&kp ESC  &kp N1      &kp Q  &kp T         &kp D         &kp J        &kp Y          &kp U         &kp I      &kp O    &kp P     &kp BACKSPACE
+//&kp TAB  &kp LSHIFT  &kp A  &kp S         &kp I         &kp G        &kp H          &kp J         &kp K      &kp L    &kp SEMI  &kp ENTER
+//&kp LT   &kp LCTRL   &kp Z  &kp X         &kp W         &kp V        &kp N          &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp LCTRL
+//                            &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE    &kp RIGHT_ALT  &kp LEFT_ALT  &mo 2
+//            >;
+//        };
     };
 };
