@@ -42,7 +42,7 @@
         Base {
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E         &kp R          &kp T             &kp Y          &kp U          &kp I      &kp O    &kp P     &morph_del
-&kp TAB    &kp A  &kp S  &bhm LCTRL D  &bhm LSHIFT F  &kp G             &kp H          &bhm LSHIFT J  &kp K      &kp L    &kp SEMI  &kp ENTER
+&kp TAB    &kp A  &kp S  &kp D  &kp F  &kp G             &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
 &kp LSHIFT  &kp Z  &kp X  &kp C         &kp V          &kp B             &kp N          &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LSHIFT
                          &kp LEFT_GUI  &mo 1          &bhm_space RALT SPACE   &kp RIGHT_ALT  &kp LCTRL   &mo 2
             >;
