@@ -27,6 +27,15 @@
             bindings = <&kp>, <&kp>;
         };
 
+        bhm_space_sym: bhm_space_sym {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;  // <-- mo for hold, kp for tap
+        };
+
         morph_del: morph_del {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp BACKSPACE>, <&kp DEL>;
@@ -44,7 +53,7 @@
 &kp ESC    &kp Q  &kp W  &kp E         &kp R          &kp T             &kp Y          &kp U          &kp I      &kp O    &kp P     &morph_del
 &kp TAB    &kp A  &kp S  &kp D  &kp F  &kp G             &kp H          &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
 &kp LSHIFT  &kp Z  &kp X  &kp C         &kp V          &kp B             &kp N          &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp LSHIFT
-                         &kp LEFT_GUI  &mo 1          &bhm_space RALT SPACE   &kp RIGHT_ALT  &kp LCTRL   &mo 2
+                         &kp LEFT_GUI  &mo 1          &bhm_space_sym 3 SPACE   &kp RIGHT_ALT  &kp LCTRL   &mo 2
             >;
         };
 
@@ -63,6 +72,15 @@
 &trans        &trans        &trans        &trans        &trans        &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans        &trans        &trans            &trans  &trans  &trans
+            >;
+        };
+
+        Symbols {
+            bindings = <
+&trans    &kp CARET  &kp LESS_THAN  &kp GREATER_THAN         &kp DOLLAR          &kp PERCENT             &kp AT_SIGN          &kp AMPERSAND          &kp ASTERISK      &kp SINGLE_QUOTE    &kp GRAVE     &trans
+&trans    &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL             &kp BACKSLASH          &kp PLUS  &kp MINUS      &kp SLASH    &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp UNDERSCORE          &kp NON_US_HASH             &kp PIPE          &kp EXCLAMATION          &kp SEMICOLON  &kp COLON  &kp QUESTION  &trans
+                         &trans &trans &trans   &trans &trans &trans
             >;
         };
 
